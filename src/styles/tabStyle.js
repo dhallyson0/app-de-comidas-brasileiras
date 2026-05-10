@@ -6,22 +6,15 @@ export const TAB_BAR_HEIGHT = 70;
 export const tabBarStyles = StyleSheet.create({
   tabBar: {
     height: 60,
-
     backgroundColor: colors.bgLightCard,
-
     borderRadius: 30,
-
     borderTopWidth: 0,
-
     position: "absolute",
-
     left: 0,
     right: 0,
     bottom: 0,
-
     paddingBottom: 0,
     paddingTop: 0,
-
     overflow: "hidden",
 
     // Android
@@ -61,13 +54,9 @@ export const tabIconStyles = StyleSheet.create({
   activeIndicator: {
     width: 4,
     height: 4,
-
     borderRadius: 999,
-
     backgroundColor: colors.primary,
-
     marginTop: 4,
-
     alignSelf: "center",
   },
 });

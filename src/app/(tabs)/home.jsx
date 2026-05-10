@@ -1,20 +1,14 @@
 import { useRouter } from "expo-router";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import tabelaprodutos from "../../components/tabelaprodutos";
 
 export default function Home() {
   const router = useRouter();
-
-  const produtos = [
-    { id: 1, nome: "Café", preco: 10 },
-    { id: 2, nome: "Suco", preco: 8 },
-    { id: 3, nome: "Chá", preco: 6 },
-  ];
-
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Página Home 🏠</Text>
 
-      {produtos.map((item) => (
+      {tabelaprodutos.map((item) => (
         <TouchableOpacity
           key={item.id}
           style={styles.button}
@@ -22,14 +16,13 @@ export default function Home() {
             router.push({
               pathname: "/itemDetail",
               params: {
-                nome: item.nome,
-                preco: item.preco,
+                id: item.id,
               },
             })
           }
         >
           <Text style={styles.buttonText}>
-            Ver {item.nome}
+           {item.nome}
           </Text>
         </TouchableOpacity>
       ))}

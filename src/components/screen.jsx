@@ -1,4 +1,5 @@
 import { SafeAreaView } from "react-native-safe-area-context";
+import { colors } from "../styles/globalStyle";
 
 export default function Screen({ children, style }) {
   return (
@@ -6,7 +7,7 @@ export default function Screen({ children, style }) {
       style={[
         {
           flex: 1,
-          backgroundColor: "#fff",
+          backgroundColor: colors.backgroundScreen,
         },
         style,
       ]}
