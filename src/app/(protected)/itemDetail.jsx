@@ -1,21 +1,21 @@
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { useState } from "react";
 import { Image, ScrollView, Text, TouchableOpacity, View, } from "react-native";
-import Screen from "../components/screen";
-import tabelaprodutos from "../components/tabelaprodutos";
-import { styles } from "../styles/itemDetailStyle";
+import Screen from "../../components/screen";
+import tabelaprodutos from "../../components/tabelaprodutos";
+import { styles } from "../../styles/itemDetailStyle";
 
 export default function ItemDetail() {
   const router = useRouter();
 
   const ICONS = {
-    back:       require("../../assets/icons/arrow_Left.png"),
-    star:       require("../../assets/icons/star.png"),
-    heart:      require("../../assets/icons/heart.png"),
-    milk:       require("../../assets/icons/milk.png"),
-    cart:       require("../../assets/icons/bag.png"),
-    bean:       require("../../assets/icons/bean.png"),
-    motorbike:  require("../../assets/icons/motor_Bike.png"),
+    back:       require("../../../assets/icons/arrow_Left.png"),
+    star:       require("../../../assets/icons/star.png"),
+    heart:      require("../../../assets/icons/heart.png"),
+    milk:       require("../../../assets/icons/milk.png"),
+    cart:       require("../../../assets/icons/bag.png"),
+    bean:       require("../../../assets/icons/bean.png"),
+    motorbike:  require("../../../assets/icons/motor_Bike.png"),
   };
 
   const [mostrarTudo, setMostrarTudo] = useState(false);
@@ -37,7 +37,7 @@ export default function ItemDetail() {
       <View style={styles.header}>
 
         <TouchableOpacity
-          onPress={() => router.push("/home")}
+          onPress={() => router.push("/")}
         >
           <Image 
             source={ICONS.back}

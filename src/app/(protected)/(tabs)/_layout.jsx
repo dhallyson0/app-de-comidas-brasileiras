@@ -1,15 +1,15 @@
 import { Tabs } from "expo-router";
 import { Image, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { colors } from "../../styles/globalStyle";
-import { COLORS, tabBarStyles, tabIconStyles } from "../../styles/tabStyle";
+import { colors } from "../../../styles/globalStyle";
+import { COLORS, tabBarStyles, tabIconStyles } from "../../../styles/tabStyle";
 
 //Ícones
 const ICONS = {
-  home:         require("../../../assets/icons/home.png"),
-  favorites:    require("../../../assets/icons/heart.png"),
-  shoppingCart: require("../../../assets/icons/bag.png"),
-  orders:       require("../../../assets/icons/notification.png"),
+  home:         require("../../../../assets/icons/home.png"),
+  favorites:    require("../../../../assets/icons/heart.png"),
+  shoppingCart: require("../../../../assets/icons/bag.png"),
+  orders:       require("../../../../assets/icons/notification.png"),
 };
 
 //Componente de ícone com ponto ativo
@@ -47,7 +47,7 @@ export default function TabsLayout() {
         }}
       >
         <Tabs.Screen
-          name="home"
+          name="index"
           options={{
             tabBarIcon: ({ focused }) => (
               <TabIcon source={ICONS.home} focused={focused} />

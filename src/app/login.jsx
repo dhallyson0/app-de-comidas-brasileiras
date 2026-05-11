@@ -10,7 +10,7 @@ export default function Index() {
 
       <TouchableOpacity
         style={styles.button}
-        onPress={() => router.push("/home")}
+        onPress={() => router.replace("/")}
       >
         <Text style={styles.buttonText}>Ir para Home</Text>
       </TouchableOpacity>

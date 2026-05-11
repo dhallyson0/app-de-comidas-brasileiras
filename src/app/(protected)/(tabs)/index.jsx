@@ -1,6 +1,6 @@
 import { useRouter } from "expo-router";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import tabelaprodutos from "../../components/tabelaprodutos";
+import tabelaprodutos from "../../../components/tabelaprodutos";
 
 export default function Home() {
   const router = useRouter();
