@@ -2,7 +2,7 @@ import { useLocalSearchParams, useRouter } from "expo-router";
 import { useState } from "react";
 import { Image, ScrollView, Text, TouchableOpacity, View, } from "react-native";
 import Screen from "../../components/screen";
-import tabelaprodutos from "../../components/tabelaprodutos";
+import tabelaprodutos from "../../components/tabelaProdutos";
 import { styles } from "../../styles/itemDetailStyle";
 
 export default function ItemDetail() {

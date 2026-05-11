@@ -3,7 +3,7 @@ const tabelaprodutos = [
 //LANCHES//
 {
   id: 1 ,
-  nome: "Cuscuz com carne de sol e queijo coalho",
+  nome: "Cuscuz com carne de sol",
   categoria: "Lanches",
   preco: "R$18,00",
   descricao: "O cuscuz com carne de sol e queijo coalho é um prato clássico nordestino, caracterizado pelo flocão de milho cozido no vapor, recheado com carne de sol desfiada e frita na manteiga de garrafa, e queijo coalho derretido. A combinação equilibra a textura macia do cuscuz, o salgado da carne e a cremosidade do queijo.",
