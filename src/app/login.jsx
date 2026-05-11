@@ -1,26 +1,86 @@
 import { useRouter } from "expo-router";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { ImageBackground, Text, TextInput, TouchableOpacity, View, } from "react-native";
+import Screen from "../components/screen";
+import { styles } from "../styles/loginStyle";
 
-export default function Index() {
+export default function login() {
   const router = useRouter();
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Bem vindo!</Text>
+    <Screen>
+    <ImageBackground 
+      source={require("../../assets/images/LANCHES-cuscuzcarnequeijo.png")}
+      style={styles.background}
+      resizeMode="cover"
+    >
+      
+      <View style={styles.overlay}>
+        <View style={styles.content}>
 
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => router.replace("/")}
-      >
-        <Text style={styles.buttonText}>Ir para Home</Text>
-      </TouchableOpacity>
-    </View>
+          {/* EMAIL */}
+          <View style={styles.searchLoginBox}>
+            <TextInput
+              placeholder="Email"
+              placeholderTextColor="#ccc"
+              style={styles.searchInput}
+            />
+          </View>
+
+          {/* SENHA */}
+          <View style={styles.searchLoginBox}>
+            <TextInput
+              placeholder="Senha"
+              placeholderTextColor="#ccc"
+              secureTextEntry
+              style={styles.searchInput}
+            />
+          </View>
+
+          {/* ESQUECEU SENHA */}
+          <TouchableOpacity
+            onPress={() => {}}
+            style={styles.forgotContainer}
+          >
+            <Text style={styles.forgotText}>
+              Esqueceu sua senha?{" "}
+              <Text style={styles.forgotHighlight}>
+                Recuperar senha
+              </Text>
+            </Text>
+          </TouchableOpacity>
+
+          <Text style={styles.subtitle}>
+            Explore pratos típicos e mergulhe na cultura brasileira.
+          </Text>
+
+          {/* BOTÃO ENTRAR */}
+          <View style={styles.buttonContainer}>
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => router.replace("/")}
+            >
+              <Text style={styles.buttonText}>
+                Entrar
+              </Text>
+            </TouchableOpacity>
+          </View>
+
+          {/* CADASTRO */}
+          <TouchableOpacity
+            onPress={() => {}}
+            style={styles.registerContainer}
+          >
+            <Text style={styles.registerText}>
+              Não possui uma conta?{" "}
+              <Text style={styles.registerHighlight}>
+                Cadastre-se
+              </Text>
+            </Text>
+          </TouchableOpacity>
+
+        </View>
+      </View>
+    </ImageBackground>
+    </Screen>  
   );
 }
-
-const styles = StyleSheet.create({
-  container: { flex: 1, justifyContent: "center", alignItems: "center" },
-  title: { fontSize: 24, marginBottom: 20 },
-  button: { backgroundColor: "#6200ee", padding: 14, borderRadius: 8 },
-  buttonText: { color: "#fff", fontSize: 16 },
-});
