@@ -1,5 +1,6 @@
 import { useRouter } from "expo-router";
 import { ImageBackground, Text, TextInput, TouchableOpacity, View, } from "react-native";
+import { IMG } from "../components/assets";
 import Screen from "../components/screen";
 import { styles } from "../styles/loginStyle";
 
@@ -9,7 +10,7 @@ export default function login() {
   return (
     <Screen>
     <ImageBackground 
-      source={require("../../assets/images/LANCHES-cuscuzcarnequeijo.png")}
+      source={IMG.cuscuzCarne}
       style={styles.background}
       resizeMode="cover"
     >

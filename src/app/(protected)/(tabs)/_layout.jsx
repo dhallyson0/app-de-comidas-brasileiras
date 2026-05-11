@@ -1,16 +1,9 @@
 import { Tabs } from "expo-router";
 import { Image, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { ICONS } from "../../../components/assets";
 import { colors } from "../../../styles/globalStyle";
 import { COLORS, tabBarStyles, tabIconStyles } from "../../../styles/tabStyle";
-
-//Ícones
-const ICONS = {
-  home:         require("../../../../assets/icons/home.png"),
-  favorites:    require("../../../../assets/icons/heart.png"),
-  shoppingCart: require("../../../../assets/icons/bag.png"),
-  orders:       require("../../../../assets/icons/notification.png"),
-};
 
 //Componente de ícone com ponto ativo
 function TabIcon({ source, focused }) {
@@ -59,7 +52,7 @@ export default function TabsLayout() {
           name="favorites"
           options={{
             tabBarIcon: ({ focused }) => (
-              <TabIcon source={ICONS.favorites} focused={focused} />
+              <TabIcon source={ICONS.heart} focused={focused} />
             ),
           }}
         />
@@ -68,7 +61,7 @@ export default function TabsLayout() {
           name="shoppingCart"
           options={{
             tabBarIcon: ({ focused }) => (
-              <TabIcon source={ICONS.shoppingCart} focused={focused} />
+              <TabIcon source={ICONS.bag} focused={focused} />
             ),
           }}
         />
@@ -77,7 +70,7 @@ export default function TabsLayout() {
           name="orders"
           options={{
             tabBarIcon: ({ focused }) => (
-              <TabIcon source={ICONS.orders} focused={focused} />
+              <TabIcon source={ICONS.notification} focused={focused} />
             ),
           }}
         />

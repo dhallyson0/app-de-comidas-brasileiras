@@ -1,19 +1,14 @@
 import { useRouter } from "expo-router";
 import { useState } from "react";
 import { FlatList, Image, ScrollView, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { ICONS } from "../../../components/assets";
 import Screen from "../../../components/screen";
-import tabelaprodutos from "../../../components/tabelaProdutos";
+import tabelaprodutos from "../../../components/tabelaprodutos";
 import { colors } from "../../../styles/globalStyle";
 import { styles } from "../../../styles/homeStyle";
 
 export default function Home() {
   const router = useRouter();
-
-  const ICONS = {
-    search:       require("../../../../assets/icons/search.png"),
-    plus:         require("../../../../assets/icons/plus.png"),
-    down:         require("../../../../assets/icons/arrow_Down.png"),
-  };
 
   const [pesquisa, setPesquisa] = useState("");
   const [categoriaSelecionada, setCategoriaSelecionada] =
@@ -24,7 +19,6 @@ export default function Home() {
   (categoriaSelecionada === "Geral" ||
     categoria === categoriaSelecionada)
 );
-
   return (
     <Screen>
     <View style={styles.header}>
