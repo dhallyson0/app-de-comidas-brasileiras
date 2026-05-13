@@ -1,14 +1,16 @@
 import { useRouter } from "expo-router";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FlatList, Image, ScrollView, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { ICONS } from "../../../components/assets";
 import Screen from "../../../components/screen";
 import tabelaprodutos from "../../../components/tabelaprodutos";
+import { CartContext } from "../../../context/cartContext";
 import { colors } from "../../../styles/globalStyle";
 import { styles } from "../../../styles/homeStyle";
 
 export default function Home() {
   const router = useRouter();
+  const { addToCart } = useContext(CartContext);
 
   const [pesquisa, setPesquisa] = useState("");
   const [categoriaSelecionada, setCategoriaSelecionada] =
@@ -99,7 +101,7 @@ export default function Home() {
           paddingHorizontal: 20,
         }}
         contentContainerStyle={{
-          paddingBottom: 120,
+          paddingBottom: 20,
         }}
         showsVerticalScrollIndicator={false}
         renderItem={({ item }) => (
@@ -135,10 +137,15 @@ export default function Home() {
 
             <View style={styles.footerCard}>
               <Text style={styles.preco}>
-              {item.preco}
+              R${item.preco}
               </Text>
 
-              <TouchableOpacity>
+              <TouchableOpacity
+              onPress={() => {
+                  addToCart(item);
+                  alert("Adicionado ao carrinho 🛒");
+                 }}
+              >
                 <Image
                   source={ICONS.plus}
                   style={styles.botaoIcon}

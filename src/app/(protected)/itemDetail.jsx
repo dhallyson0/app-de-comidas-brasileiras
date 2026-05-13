@@ -1,15 +1,20 @@
 import { useLocalSearchParams, useRouter } from "expo-router";
-import { useState } from "react";
+import { useContext, useState, } from "react";
 import { Image, ScrollView, Text, TouchableOpacity, View, } from "react-native";
 import { ICONS } from "../../components/assets";
 import Screen from "../../components/screen";
 import tabelaprodutos from "../../components/tabelaprodutos";
+import { CartContext } from "../../context/cartContext";
 import { styles } from "../../styles/itemDetailStyle";
 
 export default function ItemDetail() {
   const router = useRouter();
 
+  const { addToCart } = useContext(CartContext);
+
   const [mostrarTudo, setMostrarTudo] = useState(false);
+
+  const [adicionado, setAdicionado] = useState(false);
 
   const { id } = useLocalSearchParams();
 
@@ -148,7 +153,13 @@ export default function ItemDetail() {
 
             <TouchableOpacity
               style={styles.cartButton}
+              onPress={() => {
+                console.log("clicou");
+                addToCart(produto);
+                alert("Produto adicionado ao carrinho 🛒");
+              }}
             >
+              
               <View style={styles.cartContent}>
                 <Image
                   source={ICONS.bag}

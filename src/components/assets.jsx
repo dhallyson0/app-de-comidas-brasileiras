@@ -21,6 +21,7 @@ export const ICONS = {
     plus:           require("../../assets/icons/plus.png"),
     search:         require("../../assets/icons/search.png"),
     star:           require("../../assets/icons/star.png"),
+    wallet:         require("../../assets/icons/wallet.png"),
 }
 
 export const IMG = {

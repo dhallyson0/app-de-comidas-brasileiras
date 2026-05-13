@@ -42,7 +42,7 @@ export const styles = StyleSheet.create({
   // PESQUISA
   searchContainer: {
     height: 58,
-    backgroundColor: colors.bgSurface,
+    backgroundColor: colors.bgLightCard,
     borderRadius: 18,
     flexDirection: "row",
     alignItems: "center",
