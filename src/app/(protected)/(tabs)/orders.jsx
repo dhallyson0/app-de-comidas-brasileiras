@@ -51,8 +51,8 @@ export default function Orders() {
             style={styles.card}
             onPress={() =>
               router.push({
-                pathname: "/[pedidoId]",
-                params: { pedidoId: pedido.id },
+                pathname: "/[orderId]",
+                params: { orderId: pedido.id },
               })
             }
             >

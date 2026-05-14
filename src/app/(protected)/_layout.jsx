@@ -38,7 +38,7 @@ export default function ProtectedLayoutt() {
       }, 
           }}>
           <Stack.Screen name="(tabs)"/>
-          <Stack.Screen name="delivery"/>
+          <Stack.Screen name="[orderId]"/>
           <Stack.Screen name="itemDetail"/>
         </Stack>
       </CartProvider>
