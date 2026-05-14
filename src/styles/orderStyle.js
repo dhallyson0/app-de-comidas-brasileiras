@@ -28,55 +28,6 @@ export const styles = StyleSheet.create({
     tintColor: colors.primaryLight,
   },
 
-  // ── Search ───────────────────────────────────────────────
-  searchContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-    paddingHorizontal: 16,
-    marginTop: -28,
-    gap: 10,
-  },
-  searchBar: {
-    flex: 1,
-    flexDirection: "row",
-    alignItems: "center",
-    backgroundColor: colors.bgLightCard,
-    borderRadius: 12,
-    paddingHorizontal: 12,
-    paddingVertical: 10,
-    gap: 8,
-    elevation: 3,
-    shadowColor: colors.bgDark,
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.08,
-    shadowRadius: 4,
-  },
-  searchIcon: {
-    width: 18,
-    height: 18,
-    tintColor: colors.textSecondary,
-  },
-  searchInput: {
-    flex: 1,
-    fontSize: 14,
-    color: colors.textDark,
-  },
-  filterButton: {
-    backgroundColor: colors.primary,
-    borderRadius: 12,
-    padding: 12,
-    elevation: 3,
-    shadowColor: colors.bgDark,
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.12,
-    shadowRadius: 4,
-  },
-  filterIcon: {
-    width: 22,
-    height: 22,
-    tintColor: colors.textWhite,
-  },
-
   // ── Lista ────────────────────────────────────────────────
   list: {
     flex: 1,

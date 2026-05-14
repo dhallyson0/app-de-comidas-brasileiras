@@ -38,6 +38,36 @@ export const styles = StyleSheet.create({
     fontSize: 16,
   },
 
+    enderecoRetiradaBox: {
+    backgroundColor: "#F0FFF4",
+    borderRadius: 10,
+    borderLeftWidth: 4,
+    borderLeftColor: colors.success,
+    padding: 14,
+    marginBottom: 12,
+  },
+
+  enderecoRetiradaTitulo: {
+    fontSize: 13,
+    fontWeight: "700",
+    color: "#1A7A3C",
+    marginBottom: 4,
+    textTransform: "uppercase",
+    letterSpacing: 0.5,
+  },
+
+  enderecoRetiradaTexto: {
+    fontSize: 15,
+    fontWeight: "600",
+    color: colors.textDark,
+    marginBottom: 4,
+  },
+
+  enderecoRetiradaAviso: {
+    fontSize: 12,
+    color: colors.textSecondary,
+  },
+
   subtitulo: {
     fontSize: 18,
     fontWeight: "bold",

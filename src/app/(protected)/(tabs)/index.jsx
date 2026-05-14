@@ -1,9 +1,11 @@
 import { useRouter } from "expo-router";
-import { useContext, useState } from "react";
+import { doc, getDoc } from "firebase/firestore";
+import { useContext, useEffect, useState } from "react";
 import { FlatList, Image, ScrollView, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { ICONS } from "../../../components/assets";
 import Screen from "../../../components/screen";
 import tabelaprodutos from "../../../components/tabelaprodutos";
+import { auth, db } from "../../../config/firebase";
 import { CartContext } from "../../../context/cartContext";
 import { colors } from "../../../styles/globalStyle";
 import { styles } from "../../../styles/homeStyle";
@@ -13,8 +15,26 @@ export default function Home() {
   const { addToCart } = useContext(CartContext);
 
   const [pesquisa, setPesquisa] = useState("");
-  const [categoriaSelecionada, setCategoriaSelecionada] =
-    useState("Geral");
+  const [categoriaSelecionada, setCategoriaSelecionada] = useState("Geral");
+
+  const [localizacao, setLocalizacao] = useState("Carregando..."); 
+
+  // Busca a localização do usuário logado
+  useEffect(() => {
+    const buscarDados = async () => {
+      const uid = auth.currentUser?.uid;
+      if (!uid) return;
+
+      const docSnap = await getDoc(doc(db, "usuarios", uid));
+      if (docSnap.exists()) {
+        const dados = docSnap.data();
+        // Monta o endereço completo
+        const endereco = `${dados.localizacao}, ${dados.numeroResidencial}${dados.complemento ? ` - ${dados.complemento}` : ""}`;
+        setLocalizacao(endereco);
+      }
+    };
+    buscarDados();
+  }, []);
 
   const resultados = tabelaprodutos.filter(({ nome, categoria }) =>
   nome.toLowerCase().includes(pesquisa.toLowerCase()) &&
@@ -27,14 +47,13 @@ export default function Home() {
     {/* LOC */}
     <View style={styles.locationContainer}>
     <Text style={styles.locationLabel}>
-      Localização
+      Endereço
     </Text>
 
     <View style={styles.locationRow}>
       <Text style={styles.locationText}>
-        Teresina, Piaui
+        {localizacao}
       </Text>
-
       <Image
         source={ICONS.down}
         style={styles.downIcon}

@@ -34,6 +34,7 @@ export default function ItemDetail() {
 
         <TouchableOpacity
           onPress={() => router.push("/")}
+          style={{ position: "absolute", left: 0 }}
         >
           <Image 
             source={ICONS.left}
@@ -44,12 +45,6 @@ export default function ItemDetail() {
         <Text style={styles.headerTitle}>
           Detalhe
         </Text>
-
-        <Image
-          source={ICONS.heart}
-          style={styles.heartIcon}
-        />
-
       </View>
 
       <Image

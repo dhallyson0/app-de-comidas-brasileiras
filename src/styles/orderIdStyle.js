@@ -206,6 +206,29 @@ headerTitle: {
     textAlign: "right",
   },
 
+  // Endereço
+
+  enderecoBlock: {
+  paddingHorizontal: 20,
+  paddingTop: 16,
+  paddingBottom: 16,
+  gap: 4,
+},
+
+enderecoTitulo: {
+  fontSize: 13,
+  color: colors.textSecondary,
+  fontWeight: "600",
+  textTransform: "uppercase",
+  letterSpacing: 0.5,
+},
+
+enderecoTexto: {
+  fontSize: 15,
+  fontWeight: "600",
+  color: colors.textDark,
+},
+
   // ── Totais ─────────────────────────────────────────────────────────────────
 
   totalsBlock: {

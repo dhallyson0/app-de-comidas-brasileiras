@@ -61,9 +61,13 @@ export default function ShoppingCart() {
 
         <Text style={styles.titulo}>Carrinho</Text>
         {tipoEntrega === "retirada" && (
-       <Text style={styles.enderecoRetirada}>
-       📍Retirar em: {enderecoLoja}
-       </Text>
+          <View style={styles.enderecoRetiradaBox}>
+            <Text style={styles.enderecoRetiradaTitulo}>📍 Local de retirada</Text>
+            <Text style={styles.enderecoRetiradaTexto}>{enderecoLoja}</Text>
+            <Text style={styles.enderecoRetiradaAviso}>
+              Retire seu pedido diretamente no estabelecimento.
+            </Text>
+          </View>
         )}
 
         <View style={styles.containerEntrega}>

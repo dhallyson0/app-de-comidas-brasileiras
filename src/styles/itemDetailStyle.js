@@ -14,7 +14,7 @@ export const styles = StyleSheet.create({
     right: 20,
     zIndex: 10,
     flexDirection: "row",
-    justifyContent: "space-between",
+    justifyContent: "center",
     alignItems: "center",
   },
 
@@ -27,11 +27,7 @@ export const styles = StyleSheet.create({
     fontSize: 17,
     fontWeight: "bold",
     color: colors.textDark,
-  },
-
-  heartIcon: {
-    width: 24,
-    height: 24,
+    textAlign: "center",
   },
 
   image: {

@@ -11,7 +11,7 @@ export function OrdersProvider({ children }) {
       numero: Math.floor(Math.random() * 900) + 1,
       itens: cartItems,
       total: totalPreco,
-      tipo: tipo === "retirada" ? "Retirada" : "Delivery",
+      tipoEntrega: tipo,
       status: "Concluído",
       data: new Date(),
     };

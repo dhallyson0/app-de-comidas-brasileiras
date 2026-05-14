@@ -1,6 +1,5 @@
 import { useRouter } from "expo-router";
-import { Image, ScrollView, Text, TextInput, TouchableOpacity, View } from "react-native";
-import { ICONS } from "../../../components/assets";
+import { ScrollView, Text, TouchableOpacity, View } from "react-native";
 import Screen from "../../../components/screen";
 import { useOrders } from "../../../context/ordersContext";
 import { styles } from "../../../styles/orderStyle";
@@ -29,22 +28,6 @@ export default function Orders() {
       {/* Header */}
       <View style={styles.header}>
         <Text style={styles.headerTitle}>Seus pedidos</Text>
-      </View>
-
-      {/* Search Bar */}
-      <View style={styles.searchContainer}>
-        <View style={styles.searchBar}>
-          <Image source={ICONS.search} style={styles.searchIcon} />
-          <TextInput
-            style={styles.searchInput}
-            placeholder="Pesquisar pedidos"
-            placeholderTextColor="#A0856C"
-          />
-        </View>
-
-        <TouchableOpacity style={styles.filterButton}>
-          <Image source={ICONS.filter} style={styles.filterIcon} />
-        </TouchableOpacity>
       </View>
 
       {/* Lista de pedidos ou empty state */}
@@ -86,7 +69,7 @@ export default function Orders() {
                   </Text>
                   <Text style={styles.cardDetails}>
                     Tipo:{" "}
-                    <Text style={styles.bold}>{pedido.tipo}</Text>
+                    <Text style={styles.bold}>{pedido.tipoEntrega}</Text>
                     {"   "}Total:{" "}
                     <Text style={styles.bold}>
                       R$ {pedido.total.toFixed(2).replace(".", ",")}

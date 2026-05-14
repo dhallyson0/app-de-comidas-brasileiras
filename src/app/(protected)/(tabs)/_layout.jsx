@@ -49,15 +49,6 @@ export default function TabsLayout() {
         />
 
         <Tabs.Screen
-          name="favorites"
-          options={{
-            tabBarIcon: ({ focused }) => (
-              <TabIcon source={ICONS.heart} focused={focused} />
-            ),
-          }}
-        />
-
-        <Tabs.Screen
           name="shoppingCart"
           options={{
             tabBarIcon: ({ focused }) => (
