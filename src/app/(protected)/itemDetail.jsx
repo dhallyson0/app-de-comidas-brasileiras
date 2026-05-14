@@ -147,14 +147,13 @@ export default function ItemDetail() {
               </Text>
 
               <Text style={styles.bottomPrice}>
-                {produto.preco}
+                R$ {produto.preco}
               </Text>
             </View>
 
             <TouchableOpacity
               style={styles.cartButton}
               onPress={() => {
-                console.log("clicou");
                 addToCart(produto);
                 alert("Produto adicionado ao carrinho 🛒");
               }}

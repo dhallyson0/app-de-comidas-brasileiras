@@ -1,3 +1,4 @@
+import { useRouter } from "expo-router";
 import { Image, ScrollView, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { ICONS } from "../../../components/assets";
 import Screen from "../../../components/screen";
@@ -20,6 +21,7 @@ function formatarHora(date) {
 
 export default function Orders() {
   const { orders } = useOrders();
+  const router = useRouter(); 
 
   return (
     
@@ -61,7 +63,16 @@ export default function Orders() {
           contentContainerStyle={styles.listContent}
         >
           {orders.map((pedido) => (
-            <TouchableOpacity key={pedido.id} style={styles.card}>
+            <TouchableOpacity 
+            key={pedido.id} 
+            style={styles.card}
+            onPress={() =>
+              router.push({
+                pathname: "/[pedidoId]",
+                params: { pedidoId: pedido.id },
+              })
+            }
+            >
 
               <View style={styles.cardTop}>
                 <View style={styles.checkCircle}>

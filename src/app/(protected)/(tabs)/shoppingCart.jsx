@@ -189,9 +189,10 @@ export default function ShoppingCart() {
             </View>
           </View>
 
-          <Text style={styles.pagamentoSeta}>
-            {expandirPagamento ? "∧" : "∨"}
-          </Text>
+          <Image 
+            source={expandirPagamento ? ICONS.up : ICONS.down}
+            style={styles.pagamentoSeta}
+          />
         </TouchableOpacity>
 
         <TouchableOpacity 

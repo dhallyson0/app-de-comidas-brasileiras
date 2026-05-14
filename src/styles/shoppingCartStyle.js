@@ -229,8 +229,8 @@ pagamentoTotal: {
   marginTop: 2,
 },
 pagamentoSeta: {
-  fontSize: 16,
-  color: colors.textMuted,
+  width: 24,
+  height: 24,
 },
 pagamentoOpcao: {
   backgroundColor: colors.backgroundScreen,
@@ -244,5 +244,4 @@ pagamentoOpcaoTexto: {
   fontSize: 14,
   color: colors.textSecondary,
 },
-
 });
