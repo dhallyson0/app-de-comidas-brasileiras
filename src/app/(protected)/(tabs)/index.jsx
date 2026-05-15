@@ -82,6 +82,8 @@ export default function Home() {
     horizontal
     showsHorizontalScrollIndicator={false}
     style={styles.categoriasContainer}
+    contentContainerStyle={{
+    paddingHorizontal: 20, }}
   >
         {["Geral", "Lanches", "Bebidas", "Sobremesas"].map(
           (categoria) => (

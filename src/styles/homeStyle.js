@@ -58,7 +58,7 @@ export const styles = StyleSheet.create({
 
   input: {
     flex: 1,
-    color: colors.textWhite,
+    color: colors.textDark,
     fontSize: 16,
   },
 
@@ -68,7 +68,6 @@ export const styles = StyleSheet.create({
     minHeight: 80,
     marginTop: 15,
     marginBottom: 20,
-    paddingLeft: 20,
   },
 
   categoriaButton: {
@@ -99,7 +98,6 @@ export const styles = StyleSheet.create({
   card: {
     backgroundColor: colors.bgLightCard,
     width: "47%",
-    height: 255,
     borderRadius: 18,
     padding: 10,
     marginBottom: 16,
@@ -136,13 +134,14 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "flex-end",
     justifyContent: "space-between",
-    marginTop: 6,
+    marginTop: "auto",
   },
 
   preco: {
     fontSize: 15,
     fontWeight: "600",
     color: colors.textSecondary,
+    flexShrink: 0,
   },
 
   botaoIcon: {
