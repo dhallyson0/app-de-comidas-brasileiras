@@ -1,8 +1,11 @@
 # Desenvolvedores
 
 Dhallyson Breno Carvalho da Silva - 01797597
+
 Joanne Alexandrino Floriano de Oliveira - 01800675
+
 Raphael Pereira da Silva - 01797315
+
 Victor Davi Costa Amaral e Sousa - 01800467
 
 ---
