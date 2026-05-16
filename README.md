@@ -98,7 +98,7 @@ Depois disso:
 
 ---
 
-## Tela de Cadastro - Victor Davi
+## Tela de Cadastro - Victor Davi e Dhallyson
 
 A tela inicial foi desenvolvida para causar uma boa primeira impressão ao usuário, utilizando um design moderno e visualmente agradável.
 
@@ -356,29 +356,6 @@ O banco de dados possui os seguintes campos:
 
 ---
 
-# Dependências do Projeto
-
-O aplicativo utiliza diversas bibliotecas modernas do ecossistema React Native e Expo.
-Principais dependências utilizadas:
-
-* Expo
-* Expo Router
-* React Native
-* React
-* Firebase
-* React Navigation
-* React Native Reanimated
-* React Native Gesture Handler
-* React Native Safe Area Context
-* Expo Splash Screen
-* Expo Image
-* Expo Font
-* Expo Constants
-* Expo Linking
-* Expo Status Bar
-
----
-
 # Conceitos Trabalhados
 
 Durante o desenvolvimento foram aplicados diversos conceitos importantes:
@@ -430,3 +407,44 @@ Durante o desenvolvimento foram aplicados diversos conceitos importantes:
 "react-native-worklets": "0.5.1"
 } 
 }
+```
+
+---
+
+# Imagens das telas
+
+## Login
+
+![Tela de login](./screenshot/Screenshot_login.jpg)
+
+## Cadastro
+
+![Tela de cadastro](./screenshot/Screenshot_singUp.jpg)
+
+## Home
+
+![Tela do home](./screenshot/Screenshot_home.jpg)
+
+## Item datails
+
+![Tela dos detalhes do itens](./screenshot/Screenshot_itemDatail.jpg)
+
+## Shopping cart delivery
+
+![Tela do carrinho de entrega](./screenshot/Screenshot_shoppingCart1.jpg)
+
+## Shopping cart retirada
+
+![Tela do carrinho de retirada](./screenshot/Screenshot_shoppingCart2.jpg)
+
+## Orders
+
+![Tela dos pedidos](./screenshot/Screenshot_orders.jpg)
+
+## itens orders delivery
+
+![Tela de cadastro](./screenshot/Screenshot_idOrders1.jpg)
+
+## itens orders retirada
+
+![Tela de cadastro](./screenshot/Screenshot_idOrders2.jpg)
