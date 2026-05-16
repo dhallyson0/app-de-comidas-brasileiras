@@ -413,38 +413,75 @@ Durante o desenvolvimento foram aplicados diversos conceitos importantes:
 
 # Imagens das telas
 
-## Login
+## Autenticação
 
-![Tela de login](./screenshot/Screenshot_login.jpg)
+<table>
+  <tr>
+    <td align="center">
+      <h3>Login</h3>
+      <img src="./screenshot/Screenshot_login.jpg" width="250"/>
+    </td>
+    <td align="center">
+      <h3>Cadastro</h3>
+      <img src="./screenshot/Screenshot_singUp.jpg" width="250"/>
+    </td>
+  </tr>
+</table>
 
-## Cadastro
+---
 
-![Tela de cadastro](./screenshot/Screenshot_singUp.jpg)
+## Tela Inicial
 
-## Home
+<div align="center">
+  <img src="./screenshot/Screenshot_home.jpg" width="250"/>
+</div>
 
-![Tela do home](./screenshot/Screenshot_home.jpg)
+---
 
-## Item datails
+## Detalhes do Item
 
-![Tela dos detalhes do itens](./screenshot/Screenshot_itemDatail.jpg)
+<div align="center">
+  <img src="./screenshot/Screenshot_itemDatail.jpg" width="250"/>
+</div>
 
-## Shopping cart delivery
+---
 
-![Tela do carrinho de entrega](./screenshot/Screenshot_shoppingCart1.jpg)
+## Carrinho
 
-## Shopping cart retirada
+<table>
+  <tr>
+    <td align="center">
+      <h3>Entrega</h3>
+      <img src="./screenshot/Screenshot_shoppingCart1.jpg" width="250"/>
+    </td>
+    <td align="center">
+      <h3>Retirada</h3>
+      <img src="./screenshot/Screenshot_shoppingCart2.jpg" width="250"/>
+    </td>
+  </tr>
+</table>
 
-![Tela do carrinho de retirada](./screenshot/Screenshot_shoppingCart2.jpg)
+---
 
-## Orders
+## Pedidos
 
-![Tela dos pedidos](./screenshot/Screenshot_orders.jpg)
+<div align="center">
+  <img src="./screenshot/Screenshot_orders.jpg" width="250"/>
+</div>
 
-## itens orders delivery
+---
 
-![Tela de cadastro](./screenshot/Screenshot_idOrders1.jpg)
+## Detalhes dos Pedidos
 
-## itens orders retirada
-
-![Tela de cadastro](./screenshot/Screenshot_idOrders2.jpg)
+<table>
+  <tr>
+    <td align="center">
+      <h3>Pedido - Entrega</h3>
+      <img src="./screenshot/Screenshot_idOrders1.jpg" width="250"/>
+    </td>
+    <td align="center">
+      <h3>Pedido - Retirada</h3>
+      <img src="./screenshot/Screenshot_idOrders2.jpg" width="250"/>
+    </td>
+  </tr>
+</table>
