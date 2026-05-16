@@ -92,8 +92,8 @@ export const styles = StyleSheet.create({
     color: colors.textDark,
   },
   arrow: {
-    fontSize: 24,
-    color: colors.primaryLight,
+    height: 24,
+    width: 24,
   },
 
   cardBottom: {

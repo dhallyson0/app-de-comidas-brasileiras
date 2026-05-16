@@ -23,16 +23,23 @@ export const styles = StyleSheet.create({
     width: "100%",
   },
 
-  title: {
-    fontSize: 30,
-    color: colors.textWhite,
-    fontWeight: "bold",
-    textAlign: "center",
-    width: "100%",
-    lineHeight: 40,
-    letterSpacing: 0.8,
-    marginBottom: 18,
+  header: {
+  width: "100%",
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "center",
+  position: "relative",
+  marginBottom: 18,
   },
+
+  title: {
+  fontSize: 25,
+  color: colors.textWhite,
+  fontWeight: "bold",
+  textAlign: "center",
+  lineHeight: 40,
+  letterSpacing: 0.8,
+},
 
   subtitle: {
     color: "#ccc",
@@ -40,6 +47,19 @@ export const styles = StyleSheet.create({
     marginBottom: 30,
     textAlign: "center",
     fontWeight: "bold",
+  },
+
+  backContainer: {
+  position: "absolute",
+  left: 0,
+  justifyContent: "center",
+  alignItems: "center",
+  },
+
+  backButton: {
+    width: 24,
+    height: 24,
+    tintColor: colors.textWhite,
   },
 
   buttonContainer: {

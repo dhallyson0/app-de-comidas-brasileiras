@@ -1,5 +1,6 @@
 import { useRouter } from "expo-router";
-import { ScrollView, Text, TouchableOpacity, View } from "react-native";
+import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
+import { ICONS } from "../../../components/assets";
 import Screen from "../../../components/screen";
 import { useOrders } from "../../../context/ordersContext";
 import { styles } from "../../../styles/orderStyle";
@@ -77,7 +78,9 @@ export default function Orders() {
                   </Text>
                 </View>
 
-                <Text style={styles.arrow}>›</Text>
+                <Image style={styles.arrow}
+                source={ICONS.right}
+                />
               </View>
 
               <View style={styles.cardBottom}>

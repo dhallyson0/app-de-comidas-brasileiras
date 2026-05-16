@@ -2,12 +2,13 @@ import { useRouter } from "expo-router";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
 import { useState } from "react";
-import { Alert, ImageBackground, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Alert, ImageBackground, Text, TextInput, TouchableOpacity, View, Image} from "react-native";
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { IMG } from "../components/assets";
 import Screen from "../components/screen";
 import { auth, db } from "../config/firebase";
 import { styles } from "../styles/singUpStyle";
+import { ICONS } from "../components/assets";
 
 export default function SignUp() {
   const router = useRouter();
@@ -77,8 +78,21 @@ export default function SignUp() {
         <ImageBackground source={IMG.cuscuzCarne} style={styles.background} resizeMode="cover">
           <View style={styles.overlay}>
             <View style={styles.content}>
+            
+            <View style={styles.header}>
+              <TouchableOpacity
+                onPress={() => router.push("/")}
+                style={styles.backContainer}
+              >
+              <Image 
+                source={ICONS.left}
+                style={styles.backButton}
+              />
+              </TouchableOpacity>
+            
 
-              <Text style={styles.subtitle}>Cadastro</Text>
+              <Text style={styles.title}>Cadastro</Text>
+            </View>
 
               <View style={styles.searchLoginBox}>
                 <TextInput placeholder="Email" placeholderTextColor="#ccc"
